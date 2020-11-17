@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 
+import { store } from './model/store';
 import { Environment } from './Environment';
 import { auth0Service } from './services/Auth0Service';
 import { arnoAPIClient } from './api/ArnoClient';
-
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import App from './App';
 import './index.css';
 
 // Temporary solution for token storage.
@@ -32,9 +33,11 @@ const startup = () => {
   });
 
   ReactDOM.render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>,
+    <Provider store={store}>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </Provider>,
     document.getElementById('root')
   );
 

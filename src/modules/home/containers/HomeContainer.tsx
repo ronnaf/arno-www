@@ -1,7 +1,12 @@
 import React from 'react';
 import { HomeScreen } from '../components/HomeScreen';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../model/store';
+import { User } from '../../../api/models/User';
 
-export type HomeProps = {};
+export type HomeProps = {
+  profile: User | null;
+};
 
 /**
  * Why is this not following the same structure as (link below)?
@@ -13,5 +18,7 @@ export type HomeProps = {};
  * (https://reactjs.org/docs/hooks-rules.html#only-call-hooks-from-react-functions)
  */
 export const HomeContainer = () => {
-  return <HomeScreen />;
+  const profile = useSelector((state: RootState) => state.user.profile);
+
+  return <HomeScreen profile={profile} />;
 };
