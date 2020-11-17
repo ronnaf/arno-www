@@ -10,7 +10,7 @@ import { TodoListContainer as TodoList } from './modules/todo/containers/TodoLis
 import { TodoAddContainer as TodoAdd } from './modules/todo/containers/TodoAddContainer';
 
 /** Routes are structured here, and declared at routes.json */
-function App() {
+const App = () => {
   return (
     <Router>
       <Switch>
@@ -26,6 +26,6 @@ function App() {
       </Switch>
     </Router>
   );
-}
+};
 
 export default App;
