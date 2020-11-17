@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import routes from '../../../routes.json';
 import { Environment } from '../../../Environment';
+import { TodoListScreen } from '../components/TodoListScreen';
 
 export type TodoListProps = {
   // inputs
@@ -13,7 +14,7 @@ export type TodoListProps = {
   userClickedButton: () => void;
 };
 
-export const TodoListContainer = (Screen: React.ComponentType<TodoListProps>) => {
+export const TodoListContainer = () => {
   const [todos, setTodos] = useState<string[]>([]);
 
   const { navigation } = Environment.current();
@@ -23,8 +24,8 @@ export const TodoListContainer = (Screen: React.ComponentType<TodoListProps>) =>
     setTodos(['todo 1', 'todo 2']);
   }, []);
 
-  return () => (
-    <Screen
+  return (
+    <TodoListScreen
       todos={todos}
       userClickedButton={() => {
         navigation.navigate(routes.TODO_ADD);

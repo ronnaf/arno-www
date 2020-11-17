@@ -1,7 +1,8 @@
 import React from 'react';
+import { HomeScreen } from '../components/HomeScreen';
 
 export type HomeProps = {};
 
-export const HomeContainer = (Screen: React.ComponentType<HomeProps>) => {
-  return () => <Screen />;
+export const HomeContainer = () => {
+  return <HomeScreen />;
 };

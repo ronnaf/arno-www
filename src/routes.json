@@ -1,5 +1,5 @@
 {
-  "HOME": "Home",
-  "TODO_LIST": "TodoList",
-  "TODO_ADD": "TodoAdd"
+  "HOME": "/home",
+  "TODO_LIST": "/todos",
+  "TODO_ADD": "/add-todo"
 }

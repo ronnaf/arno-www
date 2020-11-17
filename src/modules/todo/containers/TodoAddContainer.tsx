@@ -2,6 +2,7 @@ import React from 'react';
 
 import routes from '../../../routes.json';
 import { Environment } from '../../../Environment';
+import { TodoAddScreen } from '../components/TodoAddScreen';
 
 export type TodoAddProps = {
   /* inputs */
@@ -11,11 +12,11 @@ export type TodoAddProps = {
   userClickedButton: () => void;
 };
 
-export const TodoAddContainer = (Screen: React.ComponentType<TodoAddProps>) => {
+export const TodoAddContainer = () => {
   const { navigation } = Environment.current();
 
-  return () => (
-    <Screen
+  return (
+    <TodoAddScreen
       userClickedButton={() => {
         navigation.navigate(routes.TODO_LIST);
       }}
