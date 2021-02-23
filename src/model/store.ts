@@ -1,4 +1,4 @@
-import { configureStore, ThunkAction, Action, combineReducers } from '@reduxjs/toolkit';
+import { Action, combineReducers, configureStore, ThunkAction } from '@reduxjs/toolkit';
 import { userSlice } from './userSlice';
 
 /** your app's top-level reducers */

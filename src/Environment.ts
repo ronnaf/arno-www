@@ -1,23 +1,15 @@
 import { API } from './api/API';
 import { Auth0Service } from './services/Auth0Service';
+import { LoggingService } from './services/LoggingService';
 
 /** Change 'Arno' to product name */
 type ArnoEnvironment = {
   /** The current API. */
   api: API;
-  /** Object providing navigation functions. */
-  navigation: {
-    /** Navigates to a provided `route`. */
-    navigate: (route: string, params?: any) => void;
-    /**
-     * Performs the "back" button functionality. Optionally provide a
-     * number of screens to go back.
-     */
-    goBack: (numberOfScreens?: number) => void;
-  };
   /** Available external services */
   services: {
     auth: Auth0Service;
+    logger: LoggingService;
   };
   // ...
 };

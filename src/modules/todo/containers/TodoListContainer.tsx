@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-
+import { useHistory } from 'react-router-dom';
 import { routes } from '../../../routes';
-import { Environment } from '../../../Environment';
 import { TodoListScreen } from '../components/TodoListScreen';
 
 export type TodoListProps = {
@@ -26,7 +25,7 @@ export type TodoListProps = {
 export const TodoListContainer = () => {
   const [todos, setTodos] = useState<string[]>([]);
 
-  const { navigation } = Environment.current();
+  const history = useHistory();
 
   useEffect(() => {
     /** added this as an example of fetching data from server */
@@ -37,7 +36,7 @@ export const TodoListContainer = () => {
     <TodoListScreen
       todos={todos}
       userClickedButton={() => {
-        navigation.navigate(routes.TODO__ADD);
+        history.push(routes.TODO__ADD);
       }}
     />
   );

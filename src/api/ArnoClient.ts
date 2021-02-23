@@ -1,5 +1,5 @@
-import { API } from './API';
 import { Result } from '../util/Result';
+import { API } from './API';
 
 /**
  * creates an `API` backed by the product's API

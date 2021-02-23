@@ -1,13 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
-import { routes } from './routes';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
-
-// Connected components
 import { HomeContainer as Home } from './modules/home/containers/HomeContainer';
-import { TodoListContainer as TodoList } from './modules/todo/containers/TodoListContainer';
 import { TodoAddContainer as TodoAdd } from './modules/todo/containers/TodoAddContainer';
+import { TodoListContainer as TodoList } from './modules/todo/containers/TodoListContainer';
+import { routes } from './routes';
 
 /** Routes are structured here, and declared at routes.json */
 const App = () => {

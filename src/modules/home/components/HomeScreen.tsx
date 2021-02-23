@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { HomeProps } from '../containers/HomeContainer';
 
 export const HomeScreen: React.FC<HomeProps> = ({ profile }) => {

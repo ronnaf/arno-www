@@ -1,8 +1,8 @@
 import React from 'react';
-import { HomeScreen } from '../components/HomeScreen';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../../model/store';
 import { User } from '../../../api/models/User';
+import { RootState } from '../../../model/store';
+import { HomeScreen } from '../components/HomeScreen';
 
 export type HomeProps = {
   profile: User | null;

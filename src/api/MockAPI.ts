@@ -1,5 +1,5 @@
-import { API } from './API';
 import { Result } from '../util/Result';
+import { API } from './API';
 
 const defaultAPI = (delay: number): API => ({
   getUser: () => new Promise(resolve => setTimeout(() => resolve(Result.success({ firstName: 'Mock', id: 1 })), delay)),

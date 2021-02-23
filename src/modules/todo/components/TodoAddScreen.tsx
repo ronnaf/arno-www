@@ -1,7 +1,6 @@
 import React from 'react';
-
-import { TodoAddProps } from '../containers/TodoAddContainer';
 import { ArnoButton } from '../../core/ArnoButton';
+import { TodoAddProps } from '../containers/TodoAddContainer';
 
 export const TodoAddScreen: React.FC<TodoAddProps> = ({ userClickedButton }) => {
   return (

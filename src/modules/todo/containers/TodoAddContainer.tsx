@@ -1,7 +1,6 @@
 import React from 'react';
-
+import { useHistory } from 'react-router-dom';
 import { routes } from '../../../routes';
-import { Environment } from '../../../Environment';
 import { TodoAddScreen } from '../components/TodoAddScreen';
 
 export type TodoAddProps = {
@@ -22,12 +21,12 @@ export type TodoAddProps = {
  * (https://reactjs.org/docs/hooks-rules.html#only-call-hooks-from-react-functions)
  */
 export const TodoAddContainer = () => {
-  const { navigation } = Environment.current();
+  const history = useHistory();
 
   return (
     <TodoAddScreen
       userClickedButton={() => {
-        navigation.navigate(routes.TODO__LIST);
+        history.push(routes.TODO__LIST);
       }}
     />
   );
