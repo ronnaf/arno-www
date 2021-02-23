@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
 import { HomeContainer as Home } from './modules/home/containers/HomeContainer';
 import { TodoAddContainer as TodoAdd } from './modules/todo/containers/TodoAddContainer';
@@ -11,7 +11,10 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path={routes.HOME}>
+        <Route exact path="/">
+          <Redirect to={{ pathname: routes.HOME }} />
+        </Route>
+        <Route path={routes.HOME}>
           <Home />
         </Route>
         <Route path={routes.TODO__ADD}>

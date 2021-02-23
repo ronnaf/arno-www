@@ -23,7 +23,6 @@ const startup = () => {
     api: arnoAPIClient({
       baseURL: '',
       getToken: () => Promise.resolve(token),
-      log: message => {},
     }),
     services: {
       auth: auth0Service({ clientID: '', domain: '' }),

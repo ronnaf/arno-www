@@ -9,15 +9,9 @@ import { API } from './API';
 export const arnoAPIClient = (options: {
   /** The API's base URL. */
   baseURL: string;
-
   /** A function for retrieving the authentication token. */
   getToken: () => Promise<string | undefined>;
-
-  /** A function for logging. */
-  log: (message: string) => void;
 }): API => {
-  options.log('Log messages like this');
-
   return {
     getUser: () => Promise.resolve(Result.success({ firstName: 'arno', id: 1 })),
   };
