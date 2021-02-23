@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import routes from '../../../routes.json';
+import { routes } from '../../../routes';
 import { Environment } from '../../../Environment';
 import { TodoListScreen } from '../components/TodoListScreen';
 
@@ -37,7 +37,7 @@ export const TodoListContainer = () => {
     <TodoListScreen
       todos={todos}
       userClickedButton={() => {
-        navigation.navigate(routes.TODO_ADD);
+        navigation.navigate(routes.TODO__ADD);
       }}
     />
   );

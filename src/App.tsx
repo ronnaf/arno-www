@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import routes from './routes.json';
+import { routes } from './routes';
 import './App.css';
 
 // Connected components
@@ -17,10 +17,10 @@ const App = () => {
         <Route exact path={routes.HOME}>
           <Home />
         </Route>
-        <Route path={routes.TODO_ADD}>
+        <Route path={routes.TODO__ADD}>
           <TodoAdd />
         </Route>
-        <Route path={routes.TODO_LIST}>
+        <Route path={routes.TODO__LIST}>
           <TodoList />
         </Route>
       </Switch>

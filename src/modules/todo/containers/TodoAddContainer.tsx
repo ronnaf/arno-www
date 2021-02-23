@@ -1,6 +1,6 @@
 import React from 'react';
 
-import routes from '../../../routes.json';
+import { routes } from '../../../routes';
 import { Environment } from '../../../Environment';
 import { TodoAddScreen } from '../components/TodoAddScreen';
 
@@ -27,7 +27,7 @@ export const TodoAddContainer = () => {
   return (
     <TodoAddScreen
       userClickedButton={() => {
-        navigation.navigate(routes.TODO_LIST);
+        navigation.navigate(routes.TODO__LIST);
       }}
     />
   );
